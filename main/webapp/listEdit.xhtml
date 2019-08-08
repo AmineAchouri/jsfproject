@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:h="http://java.sun.com/jsf/html"
+    template="/WEB-INF/templates/template.xhtml">
+    <ui:define name="content">
+        <h:form id="form">
+            
+            Conversation : #{bean.conversation.id}
+            
+            
+            Value : <h:inputText value="#{bean.value}" />
+            <h:commandButton value="Submit Value" action="#{bean.add2Values}" />
+            <br />
+            <br />   
+            Message : #{bean.message}
+            
+             <h2>Added Values</h2>
+        <ui:repeat var="v_value" value="#{bean.values}">
+            #{v_value} <br />
+        </ui:repeat>
+                  <h:commandButton action="#{bean.confirm}" value="Confirm"/>
+   </h:form>
+ 
+    </ui:define>
+</ui:composition>
