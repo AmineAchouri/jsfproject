@@ -1,2 +1,0 @@
-# jsfproject
-jsf scope
